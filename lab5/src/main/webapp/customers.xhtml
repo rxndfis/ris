@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible"/>
+    <title>Customers</title>
+</h:head>
+<h:body>
+    <div style="text-align: center;">
+        <h2>
+            <h:outputText value="Customer Records"/>
+        </h2>
+    </div>
+    <h:form id="customerForm">
+        <h:dataTable id="customerTable" binding="#{table}" value="#{customerBean.getCustomers()}" var="customer">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{customer.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Full Name</f:facet>
+                <h:outputText value="#{customer.fullName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Country</f:facet>
+                <h:outputText value="#{customer.country}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">State</f:facet>
+                <h:outputText value="#{customer.state}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">City</f:facet>
+                <h:outputText value="#{customer.address}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Zip</f:facet>
+                <h:outputText value="#{customer.telephone}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Update</f:facet>
+                <h:commandButton action="#{customerBean.editCustomer()}" value="Update">
+                    <f:param name="selectedCustomerId" value="#{customer.id}"/>
+                </h:commandButton>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Delete</f:facet>
+                <h:commandButton action="#{customerBean.deleteCustomer(customer.id)}" value="Delete"/>
+            </h:column>
+        </h:dataTable>
+        <div style="text-align: center;">
+            <h:commandButton action="newCustomer.xhtml?faces-redirect=true" value="Add New Customer"/>
+        </div>
+    </h:form>
+</h:body>
+
+</html>

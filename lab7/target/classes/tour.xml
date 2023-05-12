@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tours>
+    <Tour>
+        <country>Belarus</country>
+        <start>10.10.2023</start>
+        <end>10.20.2023</end>
+        <price>99.99</price>
+    </Tour>
+    <Tour>
+        <country>Russia</country>
+        <start>10.10.2023</start>
+        <end>10.20.2023</end>
+        <price>299.99</price>
+    </Tour>
+    <Tour>
+        <country>Ukraine</country>
+        <start>10.10.2023</start>
+        <end>10.20.2023</end>
+        <price>399.99</price>
+    </Tour>
+    <Tour>
+        <country>Poland</country>
+        <start>10.10.2023</start>
+        <end>10.15.2023</end>
+        <price>699.99</price>
+    </Tour>
+    <Tour>
+        <country>USA</country>
+        <start>10.10.2023</start>
+        <end>10.15.2023</end>
+        <price>899.99</price>
+    </Tour>
+    <Tour>
+        <country>UK</country>
+        <start>10.10.2023</start>
+        <end>10.15.2023</end>
+        <price>999.99</price>
+    </Tour>
+    <Tour>
+        <country>Chine</country>
+        <start>10.10.2023</start>
+        <end>10.11.2023</end>
+        <price>9.99</price>
+    </Tour>
+</Tours>
